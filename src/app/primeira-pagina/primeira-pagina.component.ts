@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-primeira-pagina',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class PrimeiraPaginaComponent {
 
+  constructor(
+    private router: Router
+  ) {}
+
+  moverParaSegundaPagina(){
+    this.router.navigate(["segunda-pagina"]);
+  }
 }
